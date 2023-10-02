@@ -1,0 +1,33 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.form-section {
+  position: relative;
+  padding: 83px 26px 91px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 114px 72px 100px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 104px 300px 100px;
+  }
+}
+
+.form-section::before {
+  content: "";
+  position: absolute;
+  width: 228px;
+  height: 32px;
+  background-color: rgba(v.$bg-alt, 0.7);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  mask-image: url("../../img/icons/stack.svg#section-leaf");
+  mask-size: 100%;
+
+  @media (min-width: v.$tablet-width) {
+    width: 296px;
+    height: 42px;
+  }
+}

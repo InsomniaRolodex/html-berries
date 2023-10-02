@@ -1,0 +1,59 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.form-hero {
+  padding: 58vw 26px 40px;
+  background-image: url("../../img/form/hero-form.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/form/hero-form@2x.jpg");
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding: 39vw 118px 36px;
+    background-image: url("../../img/form/hero-form-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/form/hero-form-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 300px 349px 46px;
+    background-image: url("../../img/form/hero-form-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/form/hero-form-desktop@2x.jpg");
+    }
+  }
+}
+
+.form-hero__headline {
+  margin: 0;
+  margin-bottom: 32px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 48px;
+  }
+}
+
+.form-hero__text {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  width: 213px;
+  margin: 0 auto;
+  display: flex;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+    width: 474px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 510px;
+  }
+}

@@ -1,0 +1,20 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.page-body {
+  position: relative;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: v.$bg-color;
+}
+
+.page-body--form {
+  background-color: #ffffff;
+}

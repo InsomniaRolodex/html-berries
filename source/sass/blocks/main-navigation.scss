@@ -1,0 +1,75 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.main-navigation__list {
+  @include m.list-reset;
+  width: 100%;
+  min-height: 360px;
+  padding: 16px 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: v.$bg-secondary;
+
+  @media (max-width: v.$max-phone) {
+    width: 100vw;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    width: fit-content;
+    min-height: auto;
+    padding: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    gap: 0;
+  }
+}
+
+.main-navigation__link {
+  @include m.link-reset;
+  line-height: 24px;
+  width: 100%;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.3s;
+
+  @media (min-width: v.$tablet-width) {
+    min-width: 112px;
+    min-height: 60px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    min-width: 162px;
+  }
+}
+
+.main-navigation__link:hover,
+.main-navigation__link:focus-visible {
+  color: v.$text-hover;
+  outline: none;
+}
+
+.main-navigation__link:active {
+  color: v.$decorate-alt;
+}
+
+.main-navigation--closed .main-navigation__list {
+  @media (max-width: v.$max-phone) {
+    display: none;
+  }
+}
+
+.main-navigation--opened {
+  position: absolute;
+  top: 0;
+  margin-top: 60px;
+  z-index: 1;
+}
+
+.main-navigation--nojs .main-navigation__list {
+  display: block;
+}

@@ -1,0 +1,47 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.button {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  width: 220px;
+  min-height: 52px;
+  color: v.$bg-color;
+  background-color: v.$decorate-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.button--big {
+  letter-spacing: 1.5px;
+  width: 264px;
+  min-height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(v.$shadow-color, 0.25);
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+    width: 336px;
+    min-height: 68px;
+  }
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: v.$button-hover;
+  outline: none;
+}
+
+.button:active {
+  background-color: rgba(v.$decorate-color, 0.25);
+}

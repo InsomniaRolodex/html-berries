@@ -1,0 +1,8 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.page-section {
+  width: 100%;
+  max-width: v.$desktop-width;
+  margin: 0 auto;
+}

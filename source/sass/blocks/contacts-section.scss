@@ -1,0 +1,211 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.contacts-section {
+  position: relative;
+  padding: 118px 0 64px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 114px 0 100px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 142px 156px 79px;
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+}
+
+.contacts-section--form {
+  padding: 94px 0 64px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 114px 0 100px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 142px 156px 70px;
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+}
+
+.contacts-section::before {
+  content: "";
+  position: absolute;
+  width: 228px;
+  height: 32px;
+  background-color: rgba(v.$bg-alt, 0.7);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  mask-image: url("../../img/icons/stack.svg#section-leaf");
+  mask-size: 100%;
+
+  @media (min-width: v.$tablet-width) {
+    width: 296px;
+    height: 42px;
+  }
+}
+
+.contacts-section__text-container {
+  @media (min-width: v.$desktop-width) {
+    padding-top: 24px;
+    order: 1;
+  }
+}
+
+.contacts-section__headline {
+  margin: 0 auto;
+  margin-bottom: 64px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 73px;
+    max-width: 500px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.contacts-section__text {
+  max-width: 249px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  display: block;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+    text-align: left;
+    width: 409px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 73px;
+  }
+}
+
+.contacts-section__list {
+  list-style-type: none;
+  max-width: 320px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  padding: 0 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media (min-width: v.$tablet-width) {
+    width: 400px;
+    max-width: 100%;
+    margin-bottom: 38px;
+    padding: 0;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-left: 27px;
+  }
+}
+
+.contacts-section__link {
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.14px;
+  max-width: 249px;
+  min-height: 32px;
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+  color: v.$text-main;
+  text-decoration: none;
+  transition-duration: 0.3s;
+
+  @media (min-width: v.$tablet-width) {
+    max-width: 308px;
+    font-size: 16px;
+    line-height: 23px;
+    padding-left: 32px;
+  }
+}
+
+.contacts-section__link--address::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 23px;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  background-color: v.$text-main;
+  mask-image: url("../../img/icons/stack.svg#contacts-leaf");
+
+  @media (min-width: v.$tablet-width) {
+    left: 4px;
+  }
+}
+
+.contacts-section__link--phone::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 19px;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  background-color: v.$text-main;
+  mask-image: url("../../img/icons/stack.svg#phone");
+
+  @media (min-width: v.$tablet-width) {
+    left: 4px;
+  }
+}
+
+.contacts-section__link--mail::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  background-color: v.$text-main;
+  mask-image: url("../../img/icons/stack.svg#envelope");
+
+  @media (min-width: v.$tablet-width) {
+    left: 3px;
+  }
+}
+
+.contacts-section__link:hover,
+.contacts-section__link:focus-visible {
+  color: v.$text-hover;
+  outline: none;
+}
+
+.contacts-section__link:active {
+  color: v.$decorate-alt;
+}
+
+.contacts-section__link:hover::before,
+.contacts-section__link:focus-visible::before {
+  background-color: v.$text-hover;
+  transition-duration: 0.3s;
+}
+
+.contacts-section__link:active::before {
+  background-color: v.$decorate-alt;
+  transition-duration: 0.3s;
+}

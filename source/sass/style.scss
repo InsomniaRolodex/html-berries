@@ -1,0 +1,28 @@
+/* GLOBAL */
+@use "global/variables";
+@use "global/global";
+@use "global/fonts";
+@use "global/mixins.scss";
+
+/* BLOCKS */
+@use "blocks/header.scss";
+@use "blocks/page-body.scss";
+@use "blocks/main-navigation.scss";
+@use "blocks/page-section.scss";
+@use "blocks/page-headline.scss";
+@use "blocks/hero-list.scss";
+@use "blocks/button.scss";
+@use "blocks/hero-section.scss";
+@use "blocks/catalog-section.scss";
+@use "blocks/catalog.scss";
+@use "blocks/news-section.scss";
+@use "blocks/news-cards.scss";
+@use "blocks/contacts-section.scss";
+@use "blocks/map.scss";
+@use "blocks/logo.scss";
+@use "blocks/footer.scss";
+@use "blocks/social-list.scss";
+@use "blocks/form-hero";
+@use "blocks/form";
+@use "blocks/form-section.scss";
+@use "blocks/main-container";

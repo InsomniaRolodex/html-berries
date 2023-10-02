@@ -1,0 +1,40 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.page-headline {
+  font-family: "Comfortaa", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  text-align: center;
+  color: v.$decorate-alt;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    font-size: 52px;
+    line-height: 54px;
+  }
+}
+
+.page-headline--hero {
+  @media (min-width: v.$tablet-width) {
+    text-align: left;
+  }
+}
+
+.page-headline--hero br {
+  @media (min-width: v.$tablet-width) {
+    display: none;
+  }
+}
+
+.page-headline--form {
+  @media (min-width: v.$tablet-width) {
+    font-size: 52px;
+    line-height: 58px;
+  }
+}

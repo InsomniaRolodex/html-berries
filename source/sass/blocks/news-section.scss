@@ -1,0 +1,46 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.news-section {
+  position: relative;
+  padding: 96px 26px 64px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 114px 26px 110px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 140px 156px 100px;
+  }
+}
+
+.news-section::before {
+  content: "";
+  position: absolute;
+  width: 228px;
+  height: 32px;
+  background-color: rgba(v.$bg-alt, 0.7);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  mask-image: url("../../img/icons/stack.svg#section-leaf");
+  mask-size: 100%;
+
+  @media (min-width: v.$tablet-width) {
+    width: 296px;
+    height: 42px;
+  }
+}
+
+.news-section__headline {
+  margin: 0;
+  margin-bottom: 64px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 103px;
+  }
+}

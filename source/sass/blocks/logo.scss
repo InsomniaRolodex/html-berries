@@ -1,0 +1,61 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.logo {
+  text-decoration: none;
+  min-width: 52px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-image: url("../../img/logo/logo.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  @media (min-width: v.$tablet-width) {
+    min-height: 60px;
+    padding-left: 66px;
+    background-image: url("../../img/logo/logo-desktop.svg");
+  }
+}
+
+.logo:hover,
+.logo:focus-visible {
+  background-image: url("../../img/logo/logo-hover.svg");
+  outline: none;
+
+  @media (min-width: v.$tablet-width) {
+    background-image: url("../../img/logo/logo-desktop-hover.svg");
+  }
+}
+
+.logo:active {
+  background-image: url("../../img/logo/logo-active.svg");
+
+  @media (min-width: v.$tablet-width) {
+    background-image: url("../../img/logo/logo-desktop-active.svg");
+  }
+}
+
+.logo__title {
+  display: none;
+
+  @media (min-width: v.$tablet-width) {
+    font-family: "Amatic SC", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    display: inline-block;
+    color: v.$decorate-alt;
+    text-decoration: none;
+  }
+}
+
+.logo:hover .logo__title,
+.logo:focus-visible .logo__title {
+  color: v.$text-hover;
+}
+
+.logo:active .logo__title {
+  color: rgba(v.$decorate-alt, 0.5);
+}

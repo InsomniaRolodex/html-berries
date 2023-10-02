@@ -1,0 +1,66 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.hero-list {
+  @include m.list-reset;
+  width: 208px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  @media (min-width: v.$tablet-width) {
+    width: 500px;
+    margin: 0;
+    gap: 20px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding-left: 21px;
+  }
+}
+
+.hero-list__item {
+  position: relative;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.3px;
+  min-height: 28px;
+  padding-left: 44px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.hero-list__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-color: v.$decorate-alt;
+  transform: translateY(-50%);
+}
+
+.hero-list__item--berries::before {
+  width: 18px;
+  height: 20px;
+  mask-image: url("../../img/icons/stack.svg#leaf");
+  left: 7px;
+}
+
+.hero-list__item--flavor::before {
+  width: 24px;
+  height: 24px;
+  mask-image: url("../../img/icons/stack.svg#flake");
+  left: 4px;
+}
+
+.hero-list__item--delivery::before {
+  width: 32px;
+  height: 32px;
+  mask-image: url("../../img/icons/stack.svg#scooter");
+  left: 0;
+}

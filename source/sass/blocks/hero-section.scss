@@ -1,0 +1,80 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.hero-section {
+  min-height: 614px;
+  padding: 0 28px;
+  padding-top: 21%;
+  background-image: url("../../img/index/hero-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 1 / 2;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/index/hero-bg-mobile@2x.jpg");
+  }
+
+  @media (min-width: v.$tablet-width) {
+    min-height: 924px;
+    padding: 0;
+    padding-top: 18.5%;
+    background-image: url("../../img/index/hero-bg-tablet.jpg");
+    aspect-ratio: 0.9 / 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/index/hero-bg-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: v.$desktop-width) {
+    min-height: 800px;
+    padding-top: 172px;
+    background-image: url("../../img/index/hero-bg-desktop.jpg");
+    background-size: contain;
+    aspect-ratio: auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/index/hero-bg-desktop@2x.jpg");
+    }
+  }
+}
+
+.hero-section__container {
+  @media (min-width: v.$tablet-width) {
+    width: 532px;
+    margin-left: auto;
+    margin-right: 22px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    width: 550px;
+    margin-right: 349px;
+  }
+}
+
+.hero-section__headline {
+  margin: 0;
+  margin-bottom: 32px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.hero-section__button {
+  margin: 0 auto;
+  margin-top: 53px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-left: 0;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-left: 34px;
+    margin-top: 57px;
+  }
+}

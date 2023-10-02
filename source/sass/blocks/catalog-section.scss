@@ -1,0 +1,27 @@
+@use "./global/variables.scss" as v;
+@use "./global/mixins.scss" as m;
+
+.catalog-section {
+  padding: 64px 28px;
+
+  @media (min-width: v.$tablet-width) {
+    padding: 100px 94px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    padding: 103px 156px 100px;
+  }
+}
+
+.catalog-section__headline {
+  margin: 0;
+  margin-bottom: 64px;
+
+  @media (min-width: v.$tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 92px;
+  }
+}
